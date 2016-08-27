@@ -22,5 +22,5 @@ a = 2
 a = 1                     # This will match
 ^a = 2
 ^a = 1                    # This will match
-^a = 2 -   a              # This will match
+^a = 2 - a                # This will match
 
