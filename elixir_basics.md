@@ -30,7 +30,7 @@ Regular Expressions (Use the `Regex` module)
 
 ##### Collection Types
   * Tuples
-  * Lists (arrays)
+  * Lists (Linked list)
   * Maps (hashes)
   * Binaries
 
