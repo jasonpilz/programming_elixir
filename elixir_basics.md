@@ -24,17 +24,27 @@ Regular Expressions (Use the `Regex` module)
   ~r{regexp}opts
 ```
 
-##### System Types
+#### System Types
   * PIDs and Ports
   * References
 
-##### Collection Types
-  * Tuples
-  * Lists (Linked list)
-  * Maps (hashes)
-  * Binaries
+#### Collection Types
+  ###### *Tuples*
+    - Ordered collection of Values
+    ex: { :ok, 42, "next" }
+    ex: iex> { :ok, file } = File.open("Rakefile")
 
-##### Other
+  ###### *Lists (Linked list)*
+    - Contain a head and a tail (is itself a list)
+    ex: [ 1, 2, 3]
+
+  ###### *Maps (hashes)*
+    - Collection of key/value pairs
+    ex: %{ key => value, key => value}
+
+  ###### *Binaries*
+
+#### Other
   * Functions
 
 <hr>
