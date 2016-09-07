@@ -12,7 +12,7 @@ greet = fn -> IO.puts "Hello" end
 # iex> greet.()
 ```
 
-> parens can be ommitted in a function definition:
+> parens can be omitted in a function definition:
 
 ```elixir
 f1 = fn a, b -> a * b end
