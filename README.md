@@ -7,3 +7,4 @@ Notes and Exercises from the [Programming Elixir 1.2](https://pragprog.com/book/
     * [Functions 2](https://github.com/jasonpilz/programming_elixir/tree/master/part_1/chapter_5/functions_2)
     * [Functions 3](https://github.com/jasonpilz/programming_elixir/tree/master/part_1/chapter_5/functions_3)
     * [Functions 4](https://github.com/jasonpilz/programming_elixir/tree/master/part_1/chapter_5/functions_4)
+    * [Functions 5](https://github.com/jasonpilz/programming_elixir/tree/master/part_1/chapter_5/functions_5)
