@@ -31,3 +31,27 @@ currently guessed number)
   - The div(a,b) function performs integer division.
   - Guard clauses are your friends.
   - Patterns can match the low and high parts of a range (a..b=4..8).
+
+# Implementation
+
+```elixir
+defmodule Chop do
+  def guess(actual, range=low..high) do
+    guess = div(low+high, 2)
+    IO.puts "Is it #{guess}?"
+    _guess(actual, guess, range)
+  end
+
+  def _guess(actual, actual, _) do
+    IO.puts "Yes, it's #{actual}"
+  end
+
+  def _guess(actual, guess, _low..high) when guess < actual do
+    guess(actual, guess+1..high)
+  end
+
+  def _guess(actual, guess, low.._high) when guess > actual do
+    guess(actual, low..guess+1)
+  end
+end
+```
