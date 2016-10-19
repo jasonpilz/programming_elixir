@@ -1,4 +1,4 @@
 defmodule MyList do
-  def length([]),          do: 0
-  def length([head|tail]), do: 1 + len(tail)
+  def len([]),          do: 0
+  def len([head|tail]), do: 1 + len(tail)
 end
