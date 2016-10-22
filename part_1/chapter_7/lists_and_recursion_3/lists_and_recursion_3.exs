@@ -1,8 +1,7 @@
 defmodule MyList do
-  def max([]),              do: nil
-  def max([ head | tail ]), do: _max(tail, head)
-
-  defp _max([], value),     do: value
-  defp _max([ head | tail ], value) when value >= head, do: _max(tail, value)
-  defp _max([ head | tail ], value) when value <= head, do: _max(tail, head)
+  def caesar([], _n), do: []
+  def caesar([ head | tail ], n) when head + n <= ?z do
+    [ head + n | caesar(tail, n) ]
+  end
+  def caesar([ head | tail ], n), do: [ head + n - 26 | caesar(tail, n) ]
 end
