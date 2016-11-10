@@ -72,5 +72,67 @@ iex> Enum.max_by(["there", "was", "a", "crooked", "man"], &String.length/1)
 
 ##### Split a collection
 ```elixir
+iex> Enum.take(list, 3)
+[1, 2, 3]
+
+iex> Enum.take_every(list, 2)
+[1, 3, 5]
+
+iex> Enum.take_while(list, &(&1 < 4))
+[1, 2, 3]
+
+iex> Enum.split(list, 3)
+{[1, 2, 3], [4, 5]}
+
+iex> Enum.split_while(list, &(&1 < 4))
+{[1, 2, 3], [4, 5]}
+```
+
+##### Join a collection
+```elixir
+iex> Enum.join(list)
+"12345"
+
+iex> Enum.join(list, ", ")
+"1, 2, 3, 4, 5"
+```
+
+##### Predicate operations
+```elixir
+iex> Enum.all(list, &(&1 < 4))
+false
+
+iex> Enum.any?(list, &(&1 < 4))
+true
+
+iex> Enum.member?(list, 4)
+true
+
+iex> Enum.empty?(list)
+false
+```
+
+##### Merge collections
+```elixir
+iex> Enum.zip(list, [:a, :b, :c])
+[{1, :a}, {2, :b}, {3, :c}]
+
+iex> Enum.with_index(["once", "upon", "a", "time"])
+[{"once", 0}, {"upon", 1}, {"a", 2}, {"time", 4}]
+```
+
+##### Fold elements into single value
+```elixir
+iex> Enum.reduce(1..100, &(&1 + &2))
+5050
+
+iex> Enum.reduce(["now", "is", "the", "time"], fn (word, longest) ->
+...>        if String.length(word) > String.length(longest) do
+...>          word
+...>        else
+...>          longest
+...>        end
+...> end) 
+"time"
 ```
 
