@@ -99,7 +99,7 @@ iex> Enum.join(list, ", ")
 
 ##### Predicate operations
 ```elixir
-iex> Enum.all(list, &(&1 < 4))
+iex> Enum.all?(list, &(&1 < 4))
 false
 
 iex> Enum.any?(list, &(&1 < 4))
