@@ -16,8 +16,8 @@ end
 
 ```elixir
 defmodule Enum do
-  def all?(col, func) do
-
-  end
+  def all?(col, func)                  do: _all?(col, func, true)
+  defp _all?([], _func, res)           do: res
+  defp _all?([head | tail], func, res) do: _all?(tail, func, res && func.(head))
 end
 ```
