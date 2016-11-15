@@ -1,7 +1,7 @@
 defmodule MyEnum do
-  def all?(col, func)                  do: _all?(col, func, true)
-  defp _all?([], _func, res)           do: res
-  defp _all?([head | tail], func, res) do: _all?(tail, func, res && func.(head))
+  def all?(col, func),                  do: _all?(col, func, true)
+  defp _all?([], _func, res),           do: res
+  defp _all?([head | tail], func, res), do: _all?(tail, func, res && func.(head))
 
 
   def each([], _func),             do: []
@@ -12,7 +12,7 @@ defmodule MyEnum do
     if func.(head) do
       [ head | filter(tail, func) ]
     else
-      [ filter(tail, func) ]
+      filter(tail, func)
     end
   end
 end
